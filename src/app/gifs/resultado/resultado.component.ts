@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Gif, SearchGifsResponse } from '../interfaces/gifs.interface';
 import { GifsService } from '../services/gifs.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { GifsService } from '../services/gifs.service';
   ]
 })
 export class ResultadoComponent  {
-  get resultados(): any[] {
+  get resultados(): Gif[] {
     return this.gifsService.respuesta
   }
 
